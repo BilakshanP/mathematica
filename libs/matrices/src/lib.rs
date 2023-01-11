@@ -264,7 +264,6 @@ fn determinant(matrix: &[Vec<f64>]) -> f64 {
 }
 
 fn matrix_mul(matrix_a: &[Vec<f64>], matrix_b: &[Vec<f64>]) -> Vec<Vec<f64>> {
-    let order_a: (usize, usize) = get_order(matrix_a);
     let order_b: (usize, usize) = get_order(matrix_b);
 
     let mut out_mat: Vec<Vec<f64>> = Vec::new();

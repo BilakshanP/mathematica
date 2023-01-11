@@ -1,8 +1,5 @@
 #![allow(unused, dead_code, unused_imports)]
 
-mod vectors;
-mod matrices;
-
 use vectors::Vector as v;
 use matrices::Matrix as m;
 
@@ -12,7 +9,6 @@ fn main() {
 
     println!("Vector 1: {}\nVector 2: {}", vector_1, vector_2);
     println!("Vector/Cross product of Vector 1 & 2: {}", vector_1.cross(&vector_2));
-
 
     let matrix_1 = m::new_from_vec_sized(
         vec![
@@ -31,7 +27,7 @@ fn main() {
         matrix_3
     );
 
-    println!("Determinant of above matrix is: {}", matrix_3.determinant())    
+    println!("Determinant of above matrix is: {}", matrix_3.determinant());
 }
 
 fn pow_n(matrix: m, n: u16) -> m {

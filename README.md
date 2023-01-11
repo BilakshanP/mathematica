@@ -6,7 +6,7 @@ for now there's only vectors & matrices
 
 also i am very less familiar with rust workspaces... i wanted to have the following code to be in a workspace and in bunch on sub crates like this:
 
-```
+```txt
 mathematica
           |
           |-Cargo.toml

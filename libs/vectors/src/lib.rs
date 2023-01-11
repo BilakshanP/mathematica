@@ -1,9 +1,8 @@
 #![allow(dead_code)]
 
-mod angle;
-
 use std::fmt;
-use angle::Angle;
+
+use angles::Angle;
 
 pub struct Vector {
     x: f64,
