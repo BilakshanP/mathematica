@@ -1,8 +1,5 @@
 #![allow(unused, dead_code, unused_imports)]
 
-mod vectors;
-mod matrices;
-
 use vectors::Vector as v;
 use matrices::Matrix as m;
 
