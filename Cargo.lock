@@ -3,24 +3,5 @@
 version = 3
 
 [[package]]
-name = "angles"
+name = "mca"
 version = "0.1.0"
-
-[[package]]
-name = "mathematica"
-version = "0.1.0"
-dependencies = [
- "matrices",
- "vectors",
-]
-
-[[package]]
-name = "matrices"
-version = "0.1.0"
-
-[[package]]
-name = "vectors"
-version = "0.1.0"
-dependencies = [
- "angles",
-]

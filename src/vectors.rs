@@ -2,7 +2,7 @@
 
 use std::fmt;
 
-use angles::Angle;
+use crate::angles::Angle;
 
 pub struct Vector {
     x: f64,

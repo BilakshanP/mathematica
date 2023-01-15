@@ -4,11 +4,25 @@ A bunch of useful mathematical functions and operations, in rust!!
 
 for now there's only vectors & matrices
 
-example code to be run in main.rs // maybe i can do better than this idk... i'll try...
+step by step for newbies:
+
+```bash
+cargo new <anyname> --bin
+```
+
+now open <anyname/src>
+in Cargo.toml add:
+
+```toml
+[dependecies]
+mathematica = { git = "https://BilakshanP/mathematica" }
+```
+
+now u may use the following code in main.rs:
 
 ```rust
-use vectors::Vector as v;
-use matrices::Matrix as m;
+use mathematica::vectors::Vector as v;
+use mathematica::matrices::Matrix as m;
 
 fn main() {
     let vector_1 = v::new(1.0, 2.0, 3.0);
