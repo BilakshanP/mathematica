@@ -1,8 +1,8 @@
 pub mod angles;
 pub mod logarithims;
-pub mod m_old_temp;
+pub mod matrices;
 pub mod vectors;
 
-pub mod matrices;
+pub mod m_test;
 
 pub mod errors;

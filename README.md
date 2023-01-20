@@ -20,12 +20,9 @@ mathematica = { git = "https://BilakshanP/mathematica" }
 
 now u may use the following code in main.rs:
 
-## if matrix example doesn't work do "use mathematica::m_old_temp::Matrix as m" instead
-
 ```rust
 use mathematica::vectors::Vector as v;
 use mathematica::matrices::Matrix as m;
-// use mathematica::m_old_temp::Matrix as m;
 
 fn main() {
     let vector_1 = v::new(1.0, 2.0, 3.0);
