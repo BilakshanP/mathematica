@@ -1,16 +1,28 @@
-pub enum LogError {
-    InvArg(f64),
-    InvBase(f64),
-    DiffBase(f64, f64),
-    NumNegExp(f64),
+pub enum LogarithimError {
+    DifferentBase(f64, f64),
+    InvalidArgument(f64),
+    InvalidBase(f64),
+    NumberNegativeExpopent(f64),
 
-    Unknown
+    UnknownError
 }
 
-pub enum MatError {
-    E1
+pub enum MatrixError {
+    InvalidMatrix,
+    InvalidMatrixArray,
+    MismatchedSize {
+        expected: usize,
+        provided: usize
+    },
+    NonSquareMatrix,
+    SingularMatrix,
+    NullMatrix,
+    NullDeterminant,
+
+    UnknownError
 }
 
-pub enum VecError {
-    E1
+pub enum VectorError {
+
+    UnknownError
 }

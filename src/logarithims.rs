@@ -1,4 +1,4 @@
-use crate::errors::LogError;
+use crate::errors::LogarithimError;
 
 pub struct Log {
     arg: f64,
@@ -6,29 +6,29 @@ pub struct Log {
 }
 
 impl Log {
-    pub fn evaluate(&self) -> Result<f64, LogError> {
+    pub fn evaluate(&self) -> Result<f64, LogarithimError> {
         if self.arg < 0.0 {
-            return Err(LogError::InvArg(self.arg));
+            return Err(LogarithimError::InvalidArgument(self.arg));
         }
 
         if self.base <= 0.0 {
-            return Err(LogError::InvBase(self.base.signum()));
+            return Err(LogarithimError::InvalidBase(self.base.signum()));
         }
 
         Ok(self.arg.log(self.base))
     }
 
-    pub fn add(&self, other: &Self) -> Result<Self, LogError> {
+    pub fn add(&self, other: &Self) -> Result<Self, LogarithimError> {
         if self.base != other.base {
-            return Err(LogError::DiffBase(self.base, other.base));
+            return Err(LogarithimError::DifferentBase(self.base, other.base));
         }
 
         Ok(Self { arg: self.arg * other.arg, base: self.base })
     }
 
-    pub fn sub(&self, other: &Self) -> Result<Self, LogError> {
+    pub fn sub(&self, other: &Self) -> Result<Self, LogarithimError> {
         if self.base != other.base {
-            return Err(LogError::DiffBase(self.base, other.base));
+            return Err(LogarithimError::DifferentBase(self.base, other.base));
         }
 
         Ok(Self { arg: self.arg / other.arg, base: self.base })
