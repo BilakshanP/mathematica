@@ -15,7 +15,7 @@ in Cargo.toml add:
 
 ```toml
 [dependecies]
-mathematica = { git = "https://BilakshanP/mathematica" }
+mathematica = { git = "https://github.com/BilakshanP/mathematica" }
 ```
 
 now u may use the following code in main.rs:
